@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Today's Kindness</title>
+
+<style>
+
+body{
+font-family:Arial;
+text-align:center;
+background:#fff7e6;
+padding:50px;
+}
+
+.box{
+background:white;
+padding:40px;
+border-radius:10px;
+max-width:500px;
+margin:auto;
+}
+
+button{
+margin-top:20px;
+padding:15px 20px;
+font-size:18px;
+background:#87c9ff;
+border:none;
+border-radius:8px;
+color:white;
+}
+
+</style>
+
+<script>
+
+const kindness = [
+
+"Tell someone something you love about them 🤝",
+"Drink a glass of water and stretch 💛",
+"Pick up a piece of litter 🌍",
+"Give an animal some love today 🐾",
+"Smile at someone new today 😊",
+"Write down 3 things you are grateful for",
+"Help someone with something small",
+"Turn off lights you don't need 🌍"
+
+];
+
+function newKindness(){
+
+const random = kindness[Math.floor(Math.random()*kindness.length)];
+
+document.getElementById("kindness").innerText = random;
+
+}
+
+</script>
+
+</head>
+
+<body onload="newKindness()">
+
+<div class="box">
+
+<h1>Today's Kindness 🌟</h1>
+
+<p id="kindness"></p>
+
+<button onclick="newKindness()">Try Another</button>
+
+</div>
+
+</body>
+</html>
